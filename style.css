@@ -1,0 +1,130 @@
+@font-face {
+    font-family: druk;
+    src: url('./public/DrukWideBold.ttf');
+}
+@font-face {
+    font-family: area;
+    src: url('./public/fonnts.com-Area_Normal_SemiBold.otf');
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: area;
+}
+
+body {
+    background-color: #212121;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+.parent-wrapper {
+    position: absolute;
+    background-color: rgba(0, 0, 255, 0.4);
+    height: 90vh;
+    width: 100%;
+    pointer-events: all;
+    z-index: -1;
+}
+
+.main {
+    width: 600px;
+    height: 500px;
+    /* background-color: bisque; */
+    position: absolute;
+    overflow: hidden; /* Prevents box from escaping */
+    margin-bottom: 20px;
+    transition: opacity 0.5s ease; /* Smooth fade effect */
+    pointer-events: all;
+    /* z-index: -1; */
+}
+
+
+.box {
+    width: 380px;
+    height: 230px;
+    position: absolute;
+    transition: transform 0.3s ease-out;
+}
+
+.box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.back {
+    position: absolute;
+    width: 380px;
+    height: 230px;
+    border: 0.2px solid #fff;
+    opacity: 0.3;
+    display: none;
+    z-index: -1;
+}
+
+.reveal-text {
+    font-size: 40px;
+    font-family: druk;
+    text-transform: uppercase;
+}
+
+.navbar {
+    display: flex;
+    height: 4.5rem;
+    width: 100%;
+    /* background-color: gray; */
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    font-family: area;
+    font-size: 0.95rem;
+}
+
+.text {
+    /* background-color: darkslategrey; */
+    /* pointer-events: all; */
+    z-index: 50;
+}
+
+.main1 {
+    transform: translate(10%, -10%);
+}
+
+.main2 {
+    transform: translate(140%, -30%);
+}
+
+.main3 {
+    transform: translate(25%, 65%);
+}
+
+.main4 {
+    transform: translate(160%, 38%);
+}
+
+
+.slider2 path {
+    display: none;
+}
