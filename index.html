@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="ball">
+    </div> -->
+
+
+
+    <div style="overflow: hidden; background-color: green; height: 30px; width: 150px;">
+        <svg class="slider" xmlns="http://www.w3.org/2000/svg" width="124" height="17" viewBox="0 0 124 17" style="position: absolute;">
+            <path d="M9.26836 12.1185V16.665H0.759766V0.00878906H17.3043C23.7502 0.00878906 25.4776 2.56139 25.4776 5.6984V6.28282C25.4776 9.41983 23.6642 12.1271 17.3043 12.1271H9.26836V12.1185ZM9.26836 7.08211H15.2244C16.3846 7.08211 16.7284 6.56643 16.7284 6.00779V5.96483C16.7284 5.36321 16.3932 4.89051 15.2244 4.89051H9.26836V7.08211Z" stroke="white"/>
+            <path d="M26.2769 0.00878906H34.7854V5.5351H43.698V0.00878906H52.2066V16.665H43.698V10.7348H34.7854V16.665H26.2769V0.00878906Z" stroke="white"/>
+            <path d="M70.5815 14.6711H62.2534L61.3768 16.665H52.7822L60.6376 0.00878906H72.5926L80.9465 16.665H71.4581L70.5815 14.6711ZM66.3702 5.13973L64.3763 9.75502H68.4071L66.3702 5.13973Z" stroke="white"/>
+            <path d="M91.0021 17C80.0097 17 79.855 12.9949 79.855 11.3362V11.1987H88.5613C88.63 11.3792 88.8964 12.359 91.5607 12.359C93.5976 12.359 94.2938 11.6456 94.2938 10.7432V10.7002C94.2938 9.87511 93.5976 9.136 91.5607 9.136C88.9394 9.136 88.6042 10.2361 88.5613 10.3908H80.0956V0H101.9V4.36601H88.6472V6.55764C89.0683 6.26542 90.7271 5.21689 94.4485 5.21689H94.629C101.548 5.21689 103.069 7.70071 103.069 10.6143V10.7518C103.069 13.6137 101.479 17 92.1194 17H91.0021Z" stroke="white"/>
+            <path d="M123.739 0.00878906V4.66704H112.033V5.96483H123.61V10.5285H112.033V11.9638H123.833V16.665H103.662V0.00878906H123.739V0.00878906Z" stroke="white"/>
+        </svg>
+        <svg class="slider2" xmlns="http://www.w3.org/2000/svg" width="124" height="17" viewBox="0 0 124 17" style="position: absolute;"> 
+            <path d="M9.26836 12.1185V16.665H0.759766V0.00878906H17.3043C23.7502 0.00878906 25.4776 2.56139 25.4776 5.6984V6.28282C25.4776 9.41983 23.6642 12.1271 17.3043 12.1271H9.26836V12.1185ZM9.26836 7.08211H15.2244C16.3846 7.08211 16.7284 6.56643 16.7284 6.00779V5.96483C16.7284 5.36321 16.3932 4.89051 15.2244 4.89051H9.26836V7.08211Z" fill="white"/>
+            <path d="M26.2769 0.00878906H34.7854V5.5351H43.698V0.00878906H52.2066V16.665H43.698V10.7348H34.7854V16.665H26.2769V0.00878906Z" fill="white"/>
+            <path d="M70.5815 14.6711H62.2534L61.3768 16.665H52.7822L60.6376 0.00878906H72.5926L80.9465 16.665H71.4581L70.5815 14.6711ZM66.3702 5.13973L64.3763 9.75502H68.4071L66.3702 5.13973Z" fill="white"/>
+            <path d="M91.0021 17C80.0097 17 79.855 12.9949 79.855 11.3362V11.1987H88.5613C88.63 11.3792 88.8964 12.359 91.5607 12.359C93.5976 12.359 94.2938 11.6456 94.2938 10.7432V10.7002C94.2938 9.87511 93.5976 9.136 91.5607 9.136C88.9394 9.136 88.6042 10.2361 88.5613 10.3908H80.0956V0H101.9V4.36601H88.6472V6.55764C89.0683 6.26542 90.7271 5.21689 94.4485 5.21689H94.629C101.548 5.21689 103.069 7.70071 103.069 10.6143V10.7518C103.069 13.6137 101.479 17 92.1194 17H91.0021Z" fill="white"/>
+            <path d="M123.739 0.00878906V4.66704H112.033V5.96483H123.61V10.5285H112.033V11.9638H123.833V16.665H103.662V0.00878906H123.739V0.00878906Z" fill="white"/>
+        </svg>
+    </div>
+
+
+    <div class="app">
+        <!-- <div class="main">
+            <div class="box"></div>
+            <div class="back"></div>
+        </div>
+        <div class="main">
+            <div class="box"></div>
+            <div class="back"></div>
+        </div>
+        <div class="main">
+            <div class="box"></div>
+            <div class="back"></div>
+        </div> -->
+        <!-- <div>
+            <h1 class="head" style="color: white;">Hello</h1>
+            <svg class="outlined-text thumbnails-hero__title" height="410" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" spacing="133" data-v-a2054a92="">
+                <text>
+                    <tspan class="reveal-text" x="50%" y="35" text-anchor="middle" alignment-baseline="top" clip-path="url(#clip-0-899.4169990422852)" style="fill: white; opacity: 1; visibility: inherit; stroke-dashoffset: 0px; stroke-width: 0px;">Imagining </tspan>
+                    <tspan class="reveal-text" x="50%" y="110" text-anchor="middle" alignment-baseline="top" clip-path="url(#clip-1-899.4169990422852)" style="fill: white; opacity: 1; visibility: inherit; stroke-dashoffset: 0px; stroke-width: 0px;">unique </tspan>
+                    <tspan class="reveal-text" x="50%" y="185" text-anchor="middle" alignment-baseline="top" clip-path="url(#clip-2-899.4169990422852)" style="fill: white; opacity: 1; visibility: inherit; stroke-dashoffset: 0px; stroke-width: 0px;">concepts </tspan>
+                    <tspan class="reveal-text" x="50%" y="260" text-anchor="middle" alignment-baseline="top" clip-path="url(#clip-3-899.4169990422852)" style="fill: white; opacity: 1; visibility: inherit; stroke-dashoffset: 0px; stroke-width: 0px;">and digital </tspan>
+                    <tspan class="reveal-text" x="50%" y="335" text-anchor="middle" alignment-baseline="top" clip-path="url(#clip-4-899.4169990422852)" style="fill: white; opacity: 1; visibility: inherit; stroke-dashoffset: 0px; stroke-width: 0px;">experiences</tspan>
+                </text>
+                <clipPath id="clip-0-899.4169990422852"><rect y="-35" x="0" width="1269" height="110"></rect></clipPath>
+                <clipPath id="clip-1-899.4169990422852"><rect y="40" x="0" width="1269" height="110"></rect></clipPath>
+                <clipPath id="clip-2-899.4169990422852"><rect y="115" x="0" width="1269" height="110"></rect></clipPath>
+                <clipPath id="clip-3-899.4169990422852"><rect y="190" x="0" width="1269" height="110"></rect></clipPath>
+                <clipPath id="clip-4-899.4169990422852"><rect y="265" x="0" width="1269" height="110"></rect></clipPath>
+            </svg>
+        </div> -->
+        
+        <nav class="navbar">
+            <img src="https://2022-pha5e-website-prod.s3.eu-west-3.amazonaws.com/assets/logo.svg" alt="">
+            <div class="nav-item">
+                    <li><a href="">Our vision</a></li>
+                    <li><a href="">Our team</a></li>
+                    <li><a href="">Our projects</a></li>
+                    <li><a href="">Contact us</a></li>
+                    <li><a href="">FR/<span style="text-decoration: underline; text-underline-offset: 4px;">EN</span></a></li>
+            </div>
+        </nav>
+
+
+        <section style="margin-top: 4rem; z-index: 100;">
+            <div class="parent-wrapper">
+                <div class="main main1">
+                    <div class="box"><img src="./public/img1.png" alt=""></div>
+                    <div class="back"></div>
+                </div>
+                <div class="main main2">
+                    <div class="box"><img src="./public/img2.png" alt=""></div>
+                    <div class="back"></div>
+                </div>
+                <div class="main main3">
+                    <div class="box"><img src="./public/img3.png" alt=""></div>
+                    <div class="back"></div>
+                </div>
+                <div class="main main4">
+                    <div class="box"><img src="./public/img4.jpg" alt=""></div>
+                    <div class="back"></div>
+                </div>
+            </div>
+            
+            <div class="text">
+                <svg style="width: 100%;" class="outlined-text thumbnails-hero__title" height="800" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" spacing="133" data-v-a2054a92="">
+                    <text>
+                        <tspan class="reveal-text" x="50%" y="100" text-anchor="middle" alignment-baseline="top" clip-path="url(#clip-0-899.4169990422852)" style="font-size: 6.3rem; fill: white; opacity: 1; visibility: inherit; stroke-dashoffset: 0px; stroke-width: 0px;">Imagining </tspan>
+                        <tspan class="reveal-text" x="50%" y="210" text-anchor="middle" alignment-baseline="top" clip-path="url(#clip-1-899.4169990422852)" style="font-size: 6.3rem; fill: white; opacity: 1; visibility: inherit; stroke-dashoffset: 0px; stroke-width: 0px;">unique </tspan>
+                        <tspan class="reveal-text" x="50%" y="320" text-anchor="middle" alignment-baseline="top" clip-path="url(#clip-2-899.4169990422852)" style="font-size: 6.3rem; fill: white; opacity: 1; visibility: inherit; stroke-dashoffset: 0px; stroke-width: 0px;">concepts </tspan>
+                        <tspan class="reveal-text" x="50%" y="430" text-anchor="middle" alignment-baseline="top" clip-path="url(#clip-3-899.4169990422852)" style="font-size: 6.3rem; fill: white; opacity: 1; visibility: inherit; stroke-dashoffset: 0px; stroke-width: 0px;">and digital </tspan>
+                        <tspan class="reveal-text" x="50%" y="540" text-anchor="middle" alignment-baseline="top" clip-path="url(#clip-4-899.4169990422852)" style="font-size: 6.3rem; fill: white; opacity: 1; visibility: inherit; stroke-dashoffset: 0px; stroke-width: 0px;">experiences</tspan>
+                    </text>
+                    <clipPath id="clip-0-899.4169990422852"><rect y="" x="0" width="1600" height="400"></rect></clipPath>
+                    <clipPath id="clip-1-899.4169990422852"><rect y="100" x="0" width="1600" height="400"></rect></clipPath>
+                    <clipPath id="clip-2-899.4169990422852"><rect y="200" x="0" width="1600" height="400"></rect></clipPath>
+                    <clipPath id="clip-3-899.4169990422852"><rect y="300" x="0" width="1600" height="400"></rect></clipPath>
+                    <clipPath id="clip-4-899.4169990422852"><rect y="400" x="0" width="1600" height="400"></rect></clipPath>
+                </svg>
+            </div>
+
+        </section>
+        
+        
+    </div>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
