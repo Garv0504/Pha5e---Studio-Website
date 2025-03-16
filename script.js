@@ -3,28 +3,22 @@ document.addEventListener("DOMContentLoaded", function () {
         strokeDasharray: 300, 
         strokeDashoffset: 300, 
         fill: "transparent",
-        // transformOrigin: "50% 100%", // Set origin to bottom
         scaleY: 0 
     });
 
-    // Stroke animation
     gsap.to(".slider path", {
         strokeDashoffset: 0,
         duration: 2,
         ease: "power2.out"
     }).then(() => {
-        // Fill animation (bottom to top)
         gsap.to(".slider path", {
             fill: "white",
-            scaleY: 1, // Expands fill from bottom to top
+            scaleY: 1,
             duration: 1.5,
             ease: "power2.out"
         });
     });
 });
-
-
-
 
 document.querySelectorAll('.main').forEach((main) => {
     const box = main.querySelector('.box');
@@ -36,22 +30,18 @@ document.querySelectorAll('.main').forEach((main) => {
     const mainRect = main.getBoundingClientRect();
     const boxRect = box.getBoundingClientRect();
 
-    // Set initial position at center
     let originalX = (mainRect.width - boxRect.width) / 2;
     let originalY = (mainRect.height - boxRect.height) / 2;
     let currentX = originalX, currentY = originalY;
 
-    // Apply initial position
     box.style.transform = `translate(${originalX}px, ${originalY}px)`;
     back.style.transform = `translate(${originalX}px, ${originalY}px)`;
 
     main.addEventListener("mouseenter", () => {
         isMouseInside = true;
 
-        // Fade out other .main divs except the hovered one
         document.querySelectorAll('.main').forEach((otherMain) => {
             if (otherMain !== main) {
-                // otherMain.style.opacity = "0.3";
                 otherMain.querySelector(".back").style.display = "block";
                 otherMain.querySelector('.box').style.display = "none";
                 otherMain.style.transition = "opacity 0.5s ease";
@@ -59,7 +49,7 @@ document.querySelectorAll('.main').forEach((main) => {
         });
 
         const elems = document.querySelectorAll('.reveal-text')
-            elems.forEach((elem) => {
+        elems.forEach((elem) => {
             elem.style.fill = "none";
             elem.style.strokeWidth = "0.5";
             elem.style.stroke = "white"; 
@@ -71,11 +61,9 @@ document.querySelectorAll('.main').forEach((main) => {
         const mainRect = main.getBoundingClientRect();
         const boxRect = box.getBoundingClientRect();
 
-        // Get mouse position relative to this .main div
         mouseX = e.clientX - mainRect.left - boxRect.width / 2;
         mouseY = e.clientY - mainRect.top - boxRect.height / 2;
 
-        // Restrict movement within this .main
         mouseX = Math.max(0, Math.min(mouseX, mainRect.width - boxRect.width));
         mouseY = Math.max(0, Math.min(mouseY, mainRect.height - boxRect.height));
     });
@@ -83,30 +71,25 @@ document.querySelectorAll('.main').forEach((main) => {
     main.addEventListener("mouseleave", () => {
         isMouseInside = false;
 
-        // Reset all .main divs to full opacity
         document.querySelectorAll('.main').forEach((otherMain) => {
             otherMain.querySelector(".back").style.display = "none";
             otherMain.querySelector('.box').style.display = "block";
             otherMain.style.opacity = "1";
         });
 
-
         const elems = document.querySelectorAll('.reveal-text')
         elems.forEach((elem) => { 
-        elem.style.fill = "white";
-        elem.style.strokeWidth = "0";
-        elem.style.opacity = '1';
-    })
+            elem.style.fill = "white";
+            elem.style.strokeWidth = "0";
+            elem.style.opacity = '1';
+        });
     });
 
-    // Smoothly move the box inside its respective .main div
     const moveBox = () => {
         if (isMouseInside) {
-            // Move smoothly toward the mouse
             currentX += (mouseX - currentX) * 0.1;
             currentY += (mouseY - currentY) * 0.1;
         } else {
-            // Smoothly return to original (center) position
             currentX += (originalX - currentX) * 0.01;
             currentY += (originalY - currentY) * 0.01;
         }
@@ -117,13 +100,56 @@ document.querySelectorAll('.main').forEach((main) => {
         requestAnimationFrame(moveBox);
     };
 
-    moveBox(); // Start animation loop for this specific box
+    moveBox();
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const paths = document.querySelectorAll(".slider-main path");
+    const app = document.querySelector(".app");
+    const mask = document.querySelector(".mask");
 
-// GSAP Animation for smooth text reveal
-// Animate text appearing from below
+    paths.forEach((path) => {
+        const pathLength = path.getTotalLength();
 
+        gsap.set(path, {
+            strokeDasharray: 300,
+            strokeDashoffset: 300,
+            stroke: "rgba(255, 255, 255, 0.25)",
+            strokeWidth: 0.5,
+            fill: "transparent"
+        });
 
+        gsap.to(path, {
+            strokeDashoffset: 0,
+            duration: 3,
+            ease: "power2.out",
+            onComplete: function () {
+                gsap.to(path, {
+                    fill: "white",
+                    duration: 0.5
+                });
 
+                gsap.to(mask, {
+                    display: "block",
+                    y: "-100%",
+                    duration: 1,
+                    ease: "ease-out",
+                    onComplete: function () {
+                        gsap.to(path, {
+                            visibility: "hidden"
+                        });
 
+                        gsap.to(app, {
+                            opacity: 1,
+                            duration: 0.5
+                        });
+
+                        gsap.to(mask, {
+                            visibility: "hidden",
+                        });
+                    }
+                });
+            }
+        });
+    });
+});
