@@ -7,60 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <div class="ball">
-    </div> -->
 
-
-
-    <div style="overflow: hidden; background-color: green; height: 30px; width: 150px;">
-        <svg class="slider" xmlns="http://www.w3.org/2000/svg" width="124" height="17" viewBox="0 0 124 17" style="position: absolute;">
-            <path d="M9.26836 12.1185V16.665H0.759766V0.00878906H17.3043C23.7502 0.00878906 25.4776 2.56139 25.4776 5.6984V6.28282C25.4776 9.41983 23.6642 12.1271 17.3043 12.1271H9.26836V12.1185ZM9.26836 7.08211H15.2244C16.3846 7.08211 16.7284 6.56643 16.7284 6.00779V5.96483C16.7284 5.36321 16.3932 4.89051 15.2244 4.89051H9.26836V7.08211Z" stroke="white"/>
-            <path d="M26.2769 0.00878906H34.7854V5.5351H43.698V0.00878906H52.2066V16.665H43.698V10.7348H34.7854V16.665H26.2769V0.00878906Z" stroke="white"/>
-            <path d="M70.5815 14.6711H62.2534L61.3768 16.665H52.7822L60.6376 0.00878906H72.5926L80.9465 16.665H71.4581L70.5815 14.6711ZM66.3702 5.13973L64.3763 9.75502H68.4071L66.3702 5.13973Z" stroke="white"/>
-            <path d="M91.0021 17C80.0097 17 79.855 12.9949 79.855 11.3362V11.1987H88.5613C88.63 11.3792 88.8964 12.359 91.5607 12.359C93.5976 12.359 94.2938 11.6456 94.2938 10.7432V10.7002C94.2938 9.87511 93.5976 9.136 91.5607 9.136C88.9394 9.136 88.6042 10.2361 88.5613 10.3908H80.0956V0H101.9V4.36601H88.6472V6.55764C89.0683 6.26542 90.7271 5.21689 94.4485 5.21689H94.629C101.548 5.21689 103.069 7.70071 103.069 10.6143V10.7518C103.069 13.6137 101.479 17 92.1194 17H91.0021Z" stroke="white"/>
-            <path d="M123.739 0.00878906V4.66704H112.033V5.96483H123.61V10.5285H112.033V11.9638H123.833V16.665H103.662V0.00878906H123.739V0.00878906Z" stroke="white"/>
+    <div class="container">
+        <svg class="slider-main" xmlns="http://www.w3.org/2000/svg" width="600" height="80" viewBox="0 0 248 34" fill="none">
+            <path d="M18.5367 24.237V33.33H1.51953V0.0175781H34.6086C47.5004 0.0175781 50.9552 5.12278 50.9552 11.3968V12.5656C50.9552 18.8397 47.3284 24.2542 34.6086 24.2542H18.5367V24.237ZM18.5367 14.1642H30.4488C32.7692 14.1642 33.4568 13.1329 33.4568 12.0156V11.9297C33.4568 10.7264 32.7864 9.78101 30.4488 9.78101H18.5367V14.1642Z"/>
+            <path d="M52.5538 0.0175781H69.5709V11.0702H87.396V0.0175781H104.413V33.33H87.396V21.4696H69.5709V33.33H52.5538V0.0175781Z"/>
+            <path d="M141.163 29.3421H124.507L122.754 33.33H105.564L121.275 0.0175781H145.185L161.893 33.33H142.916L141.163 29.3421ZM132.74 10.2795L128.753 19.5101H136.814L132.74 10.2795Z"/>
+            <path d="M182.004 34C160.019 34 159.71 25.9898 159.71 22.6724V22.3974H177.123C177.26 22.7584 177.793 24.718 183.121 24.718C187.195 24.718 188.588 23.2912 188.588 21.4864V21.4004C188.588 19.7502 187.195 18.272 183.121 18.272C177.879 18.272 177.208 20.4723 177.123 20.7817H160.191V0H203.8V8.73203H177.294V13.1153C178.137 12.5308 181.454 10.4338 188.897 10.4338H189.258C203.096 10.4338 206.138 15.4014 206.138 21.2286V21.5037C206.138 27.2274 202.959 34 184.239 34H182.004Z"/>
+            <path d="M247.477 0.0175781V9.33407H224.067V11.9297H247.22V21.057H224.067V23.9275H247.667V33.33H207.325V0.0175781H247.477V0.0175781Z"/>
         </svg>
-        <svg class="slider2" xmlns="http://www.w3.org/2000/svg" width="124" height="17" viewBox="0 0 124 17" style="position: absolute;"> 
-            <path d="M9.26836 12.1185V16.665H0.759766V0.00878906H17.3043C23.7502 0.00878906 25.4776 2.56139 25.4776 5.6984V6.28282C25.4776 9.41983 23.6642 12.1271 17.3043 12.1271H9.26836V12.1185ZM9.26836 7.08211H15.2244C16.3846 7.08211 16.7284 6.56643 16.7284 6.00779V5.96483C16.7284 5.36321 16.3932 4.89051 15.2244 4.89051H9.26836V7.08211Z" fill="white"/>
-            <path d="M26.2769 0.00878906H34.7854V5.5351H43.698V0.00878906H52.2066V16.665H43.698V10.7348H34.7854V16.665H26.2769V0.00878906Z" fill="white"/>
-            <path d="M70.5815 14.6711H62.2534L61.3768 16.665H52.7822L60.6376 0.00878906H72.5926L80.9465 16.665H71.4581L70.5815 14.6711ZM66.3702 5.13973L64.3763 9.75502H68.4071L66.3702 5.13973Z" fill="white"/>
-            <path d="M91.0021 17C80.0097 17 79.855 12.9949 79.855 11.3362V11.1987H88.5613C88.63 11.3792 88.8964 12.359 91.5607 12.359C93.5976 12.359 94.2938 11.6456 94.2938 10.7432V10.7002C94.2938 9.87511 93.5976 9.136 91.5607 9.136C88.9394 9.136 88.6042 10.2361 88.5613 10.3908H80.0956V0H101.9V4.36601H88.6472V6.55764C89.0683 6.26542 90.7271 5.21689 94.4485 5.21689H94.629C101.548 5.21689 103.069 7.70071 103.069 10.6143V10.7518C103.069 13.6137 101.479 17 92.1194 17H91.0021Z" fill="white"/>
-            <path d="M123.739 0.00878906V4.66704H112.033V5.96483H123.61V10.5285H112.033V11.9638H123.833V16.665H103.662V0.00878906H123.739V0.00878906Z" fill="white"/>
-        </svg>
+
+        <div class="mask"></div>
     </div>
 
 
     <div class="app">
-        <!-- <div class="main">
-            <div class="box"></div>
-            <div class="back"></div>
-        </div>
-        <div class="main">
-            <div class="box"></div>
-            <div class="back"></div>
-        </div>
-        <div class="main">
-            <div class="box"></div>
-            <div class="back"></div>
-        </div> -->
-        <!-- <div>
-            <h1 class="head" style="color: white;">Hello</h1>
-            <svg class="outlined-text thumbnails-hero__title" height="410" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" spacing="133" data-v-a2054a92="">
-                <text>
-                    <tspan class="reveal-text" x="50%" y="35" text-anchor="middle" alignment-baseline="top" clip-path="url(#clip-0-899.4169990422852)" style="fill: white; opacity: 1; visibility: inherit; stroke-dashoffset: 0px; stroke-width: 0px;">Imagining </tspan>
-                    <tspan class="reveal-text" x="50%" y="110" text-anchor="middle" alignment-baseline="top" clip-path="url(#clip-1-899.4169990422852)" style="fill: white; opacity: 1; visibility: inherit; stroke-dashoffset: 0px; stroke-width: 0px;">unique </tspan>
-                    <tspan class="reveal-text" x="50%" y="185" text-anchor="middle" alignment-baseline="top" clip-path="url(#clip-2-899.4169990422852)" style="fill: white; opacity: 1; visibility: inherit; stroke-dashoffset: 0px; stroke-width: 0px;">concepts </tspan>
-                    <tspan class="reveal-text" x="50%" y="260" text-anchor="middle" alignment-baseline="top" clip-path="url(#clip-3-899.4169990422852)" style="fill: white; opacity: 1; visibility: inherit; stroke-dashoffset: 0px; stroke-width: 0px;">and digital </tspan>
-                    <tspan class="reveal-text" x="50%" y="335" text-anchor="middle" alignment-baseline="top" clip-path="url(#clip-4-899.4169990422852)" style="fill: white; opacity: 1; visibility: inherit; stroke-dashoffset: 0px; stroke-width: 0px;">experiences</tspan>
-                </text>
-                <clipPath id="clip-0-899.4169990422852"><rect y="-35" x="0" width="1269" height="110"></rect></clipPath>
-                <clipPath id="clip-1-899.4169990422852"><rect y="40" x="0" width="1269" height="110"></rect></clipPath>
-                <clipPath id="clip-2-899.4169990422852"><rect y="115" x="0" width="1269" height="110"></rect></clipPath>
-                <clipPath id="clip-3-899.4169990422852"><rect y="190" x="0" width="1269" height="110"></rect></clipPath>
-                <clipPath id="clip-4-899.4169990422852"><rect y="265" x="0" width="1269" height="110"></rect></clipPath>
-            </svg>
-        </div> -->
-        
         <nav class="navbar">
             <img src="https://2022-pha5e-website-prod.s3.eu-west-3.amazonaws.com/assets/logo.svg" alt="">
             <div class="nav-item">
@@ -73,7 +34,7 @@
         </nav>
 
 
-        <section style="margin-top: 4rem; z-index: 100;">
+        <section style="margin-top: 8rem; z-index: 100;">
             <div class="parent-wrapper">
                 <div class="main main1">
                     <div class="box"><img src="./public/img1.png" alt=""></div>
